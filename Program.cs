@@ -10,7 +10,6 @@ namespace SimpleEncryptions
     {
         public async static Task<int> Main(string[] args)
         {
-            //Change.Encrypt("HELLO LIZA", "CABGHE", new Dictionary<int, char> { { 0, 'A'}, { 1, 'B'}, { 0, 'A' }, { 1, 'B' } });
             if (args.Length == 1)
             {
                 if (args[0] == "/?" || args[0] == "/?.")
@@ -37,12 +36,6 @@ namespace SimpleEncryptions
                 Console.WriteLine(UIConstants.KeyFileNotFound + UIConstants.WhiteSpace + args[3]);
                 return 1;
             }
-
-            /*if (!File.Exists(args[5]))
-            {
-                Console.WriteLine(UIConstants.OutputFileNotFound + UIConstants.WhiteSpace + args[5]);
-                return 1;
-            }*/
 
             string alphabetPath = PathConstants.DefaultAlphabetFilePath;
 
