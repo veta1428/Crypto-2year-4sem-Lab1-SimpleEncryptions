@@ -48,7 +48,7 @@ namespace SimpleEncryptions.Encryptions
         {
             if (key.Length != key.Cast<char>().ToHashSet().Count)
             {
-                Console.WriteLine();
+                Console.WriteLine(UIConstants.KeyCharactersNotUnique);
                 return false;
             }
 

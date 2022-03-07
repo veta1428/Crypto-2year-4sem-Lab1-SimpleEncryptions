@@ -21,5 +21,6 @@ namespace SimpleEncryptions.Constants
         public const string InputTextWrong = "Input file is empty or from other alphabet.";
         public const string KeyIsNotFromAlphabet = "Error: Key is not from alphabet.";
         public const string KeyHasWrongLength = "Error: Key has wrong length.";
+        public const string KeyCharactersNotUnique = "Key characters are not unique!";
     }
 }

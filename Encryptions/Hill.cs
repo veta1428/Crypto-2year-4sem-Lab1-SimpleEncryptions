@@ -20,6 +20,13 @@ namespace SimpleEncryptions.Encryptions
                 return false;
             }
 
+            if (inputText.Length % 2 == 1)
+            {
+                decryptedString = string.Empty;
+                Console.WriteLine("Input text length should devide by 2!");
+                return false;
+            }
+
             int a11 = alphabet.First(x => x.Value == key[0]).Key;
             int a12 = alphabet.First(x => x.Value == key[1]).Key;
             int a21 = alphabet.First(x => x.Value == key[2]).Key;

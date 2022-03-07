@@ -10,7 +10,7 @@ namespace SimpleEncryptions
     {
         public async static Task<int> Main(string[] args)
         {
-
+            //Change.Encrypt("HELLO LIZA", "CABGHE", new Dictionary<int, char> { { 0, 'A'}, { 1, 'B'}, { 0, 'A' }, { 1, 'B' } });
             if (args.Length == 1)
             {
                 if (args[0] == "/?" || args[0] == "/?.")
@@ -125,6 +125,10 @@ namespace SimpleEncryptions
                     {
                         return await HelperEncryptionMaster.EncryptMaster<Vizhiner>(new Vizhiner(), sourceFilePath, keyFilePath, encryptedFilePath, alphabet);
                     }
+                case EncryptionTypesConstants.Change:
+                    {
+                        return await HelperEncryptionMaster.EncryptMaster<Change>(new Change(), sourceFilePath, keyFilePath, encryptedFilePath, alphabet);
+                    }
                 default:
                     break;
             }
@@ -159,6 +163,10 @@ namespace SimpleEncryptions
                 case EncryptionTypesConstants.Vizhiner:
                     {
                         return await HelperEncryptionMaster.DecryptMaster<Vizhiner>(new Vizhiner(), sourceFilePath, keyFilePath, encryptedFilePath, alphabet);
+                    }
+                case EncryptionTypesConstants.Change:
+                    {
+                        return await HelperEncryptionMaster.DecryptMaster<Change>(new Change(), sourceFilePath, keyFilePath, encryptedFilePath, alphabet);
                     }
                 default:
                     break;

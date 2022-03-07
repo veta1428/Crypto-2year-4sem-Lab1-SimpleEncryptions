@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SimpleEncryptions": {
+      "commandName": "Project",
+      "commandLineArgs": "enc change in.txt key.txt out.txt a.txt"
+    }
+  }
+}
